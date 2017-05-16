@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="estilos.css" media="screen" />
+<link rel="stylesheet" href="pikaday.css" media="screen" />
+<title>Fechas</title>
+</head>
+<body>
+  <header>
+    <h1 id="titulo" class="titulo">Fecha</h1>
+    <h2 id="time" class="titulo"></h2>
+  </header>
+  <section class="form_contenedor">
+  <form>
+  <div class="form_description">
+    <p>Introducir la fecha de entrada como de salida.</p>
+  </div>
+  <ul>
+   <li style="width:100%">
+     <span>		
+        <span>
+            <input id="datCom_1" name="datCom_1" class="element text" value="" type="text"> 
+            <label for="datCom_1">Entrada</label>
+        </span>
+        <span class="dreta">
+            <input id="datCom_2" name="datCom_2" class="element text" value="" type="text" disabled> 
+            <label for="datCom_2">Salida</label>
+        </span>
+     </span>
+   </li>
+   <li><div id="aviso" class="aviso">La fecha de salida debe ser posterior a la entrada.</div></li>
+   <li><div class="comfirm"><p>Queda confirmada la fecha de entrada para el sistema en: <div id="comfirmacion"><span ></span></div></p></div></li>
+  </ul>
+  </form>
+  </section>
+  <hr>
+  <section class="form_contenedor">
+    <form>
+      <ul>
+      <li>
+        <label class="description" for="elMes">Mes </label>
+        <div>
+          <select class="element select large" id="elMes" name="elMes"> 
+              <option value="0" >Enero</option>
+              <option value="1" >Febrero</option>
+              <option value="2" >Marzo</option>
+              <option value="3" >Abril</option>
+              <option value="4" >Mayo</option>
+              <option value="5" >Junio</option>
+              <option value="6" >Julio</option>
+              <option value="7" >Agosto</option>
+              <option value="8" >Septiembre</option>
+              <option value="9" >Octubre</option>
+              <option value="10" >Noviembre</option>
+              <option value="11" >Diciembre</option>
+            </select>
+          </div> 
+        </li>
+        <li>
+          <input id="boto1" class="button_text" type="button" name="boto1" value="Ver" />
+        </li>
+      </ul>
+    </form>
+    <div id="tabla"></div>
+  </section>
+  <hr>
+  <section class="form_contenedor">
+    <form>
+      <div class="form_description">
+        <p>Escoger la fecha en entrada.</p>
+      </div>
+      <ul>
+       <li style="width:100%">
+         <div>		
+            
+                <input id="datCom_3" name="datCom_3" class="element text" value="" type="text"> 
+                <label for="datCom_3">Entrada</label>
+            
+            <span class="dreta" style="float:none">
+                <input id="datCom_4" name="datCom_4" class="element text" value="" type="text" disabled> 
+            </span>
+         </div>
+       </li>
+      </ul>
+    </form>
+  </section>
+  <hr>
+    <section class="form_contenedor">
+  <form>
+  <div class="form_description">
+    <p>Zona horaria de México en Madrid seran:</p>
+    <h2 id="hora"></h2>
+  </div>
+  <ul>
+   <li style="width:100%">
+     <span>		
+        <span>
+            <input id="datCom_5" name="datCom_5" class="element text" value="" type="text"> 
+            <label for="datCom_5">Horas</label>
+        </span>
+        <span class="dreta">
+            <input id="datCom_6" name="datCom_6" class="element text" value="" type="text" > 
+            <label for="datCom_6">Minutos</label>
+        </span>
+     </span>
+   </li>
+   <li><input id="boto2" class="button_text" type="button" name="boto1" value="Ver" /></div></li>
+  </ul>
+  </form>
+  </section>
+
+  <div id="respuesta"></div>
+  <script src="moment.js"></script>
+  <script src="moment-timezone-with-data-2012-2022.js"></script>
+  <script src="pikaday.js"></script>
+  <script src="fechas.js"></script>
+</body>
+</html>

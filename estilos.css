@@ -78,6 +78,9 @@ td[data-es]{
 	background-color:#AFA8A8;
 	color:rgba(255,255,255,1.00);
 }
+.alin_dret{
+	text-align: right;
+}
 .aviso{
 	position:relative;
 	display: none;

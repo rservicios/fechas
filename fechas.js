@@ -183,7 +183,8 @@ var fechaEscogida = new Pikaday({
 		var minuto = document.getElementById("datCom_6").value;
 		var numHora = Number(hora);
 		var numMinuto = Number(minuto);
-		var horario = moment().hours(numHora).minute(numMinuto);
+		moment.tz.setDefault("America/Mexico_City");
+		var horario = moment().hours(numHora).minute(numMinuto).tz("America/Mexico_City");
 		var mexico = horario.tz("America/Mexico_City");
 		var madrid = mexico.clone().tz("Europe/Madrid");
 		document.getElementById("hora").textContent = madrid.format('HH:mm') 
